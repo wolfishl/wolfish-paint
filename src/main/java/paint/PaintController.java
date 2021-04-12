@@ -3,19 +3,16 @@ package paint;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
 
 public class PaintController {
 
     @FXML
-    private ColorPicker colorPicker;
+    ColorPicker colorPicker;
     @FXML
-    private PaintCanvas paintCanvas;
+    PaintCanvas paintCanvas;
 
 
     @FXML
@@ -25,17 +22,17 @@ public class PaintController {
         paintCanvas.initialize();
     }
 
-    public void changeColor(Event e)
+    public void changeColor()
     {
         paintCanvas.setColor(colorPicker.getValue());
     }
 
-    public void erase(Event e)
+    public void erase()
     {
         paintCanvas.setErase(true);
     }
 
-    public void draw(Event e)
+    public void draw()
     {
         paintCanvas.setErase(false);
     }
